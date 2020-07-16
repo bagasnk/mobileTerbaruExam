@@ -76,6 +76,7 @@ export default ({ navigation, data }) => {
               <Icon
                 type="Entypo"
                 name="star"
+                style={{color:"yellow", fontSize:15}}
               />{data.rating}
             </Tagline>
           </View>
@@ -85,7 +86,7 @@ export default ({ navigation, data }) => {
           style={{
             flexDirection: "row",
             alignItems: "center",
-            marginTop: 25,
+            marginTop: 5,
             justifyContent: "space-between",
           }}
         >

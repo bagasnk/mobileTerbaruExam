@@ -20,14 +20,8 @@ import { API_URL } from "../../constants/API";
 import { Icon } from "native-base";
 import Header from "../../components/General/Header";
 import { useSelector, useDispatch } from "react-redux";
-
-
-
 const { width } = Dimensions.get("screen");
-
 const styles = StyleSheet.create({});
-
-
 
 export default ({ navigation }) => {
   const [postList, setPostList] = useState([]);
@@ -56,7 +50,14 @@ export default ({ navigation }) => {
       }}
     >
       <SafeAreaView />
-      <Header title={userSelector.username} />
+      {/* <Header title={userSelector.username} /> */}
+      <View style={{ backgroundColor : Colors.primaryColor}}>
+        <Text style={{ fontSize : 20, fontWeight:"bold", textAlign:"right"}}>
+          {"Hello," + userSelector.username}
+        </Text>
+      </View>
+
+
       <FlatList
        // ListHeaderComponentStyle={{ marginHorizontal: 15 }}
         contentContainerStyle={{ marginTop: 20 }}

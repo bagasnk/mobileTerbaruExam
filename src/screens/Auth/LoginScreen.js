@@ -17,7 +17,7 @@ import Axios from "axios";
 import { API_URL } from "../../constants/API";
 import { useDispatch, useSelector } from "react-redux";
 import AsyncStorage from "@react-native-community/async-storage";
-import { Icon } from "native-base";
+import { Icon, H1 } from "native-base";
 
 const styles = StyleSheet.create({
   container: {
@@ -76,15 +76,17 @@ export default (props) => {
           style={{ justifyContent: "center", flex: 1 }}
         >
           <View style={{ ...styles.contentContainer }}>
-            <TextUI style={{ ...styles.welcomeText }}>
+            <View style={{alignItems:"center"}}>
+
+            <H1 style={{ ...styles.welcomeText }}>
               TomatoApp
-            </TextUI>
+            </H1>
             <Icon
+              style={{fontSize:100}}
               type="MaterialCommunityIcons"
               name="food"
-
-            //style={{ color, fontSize: size }}
-            />
+              />
+              </View>
 
             <View
               style={{
@@ -103,6 +105,11 @@ export default (props) => {
                   ...StyleSheet.absoluteFillObject,
                 }}
               />
+              <Icon
+              style={{fontSize:20}}
+              type="Entypo"
+              name="user"
+              />
               <TextInput
                 autoCapitalize="none"
                 placeholderTextColor="lightgrey"
@@ -116,6 +123,8 @@ export default (props) => {
                 onChangeText={(text) => setUsername(text)}
               />
             </View>
+
+
             <Button
               onPress={loginBtnHandler}
               containerStyle={{ marginTop: 40 }}
@@ -123,6 +132,8 @@ export default (props) => {
             >
               LOGIN
             </Button>
+
+
           </View>
         </KeyboardAvoidingView>
       </TouchableWithoutFeedback>

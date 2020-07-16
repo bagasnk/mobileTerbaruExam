@@ -47,7 +47,7 @@ export default (props) => {
       }}
     >
       <SafeAreaView />
-      {/* <Header  title={postDetailData.User.username} /> */}
+      <Header  {...props} title={postDetailData.restaurantName} /> 
       <ScrollView style={{ flex: 1 }}>
         <Image
           style={{ maxHeight: 540 }}
@@ -72,45 +72,6 @@ export default (props) => {
           </TextUI>
         </View>
       </ScrollView>
-      <KeyboardAvoidingView
-        behavior="padding"
-        keyboardVerticalOffset={15}
-        style={{
-          paddingHorizontal: 15,
-          backgroundColor: "#20242F",
-          paddingVertical: 10,
-        }}
-      >
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-          <View
-            style={{
-              backgroundColor: "#485164",
-              borderRadius: 18,
-              justifyContent: "center",
-              flex: 1,
-            }}
-          >
-            <TextInput
-              placeholderTextColor="white"
-              placeholder="Write a comment.."
-              style={{
-                fontSize: 15,
-                paddingHorizontal: 15,
-                paddingVertical: 7,
-                lineHeight: 20,
-              }}
-            />
-          </View>
-          <TouchableOpacity style={{ marginHorizontal: 11 }}>
-            <Icon
-              type="MaterialCommunityIcons"
-              name="send"
-              style={{ color: Colors.primaryColor }}
-            />
-          </TouchableOpacity>
-        </View>
-        <SafeAreaView />
-      </KeyboardAvoidingView>
     </View>
   );
 };
